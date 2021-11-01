@@ -1,0 +1,136 @@
+@keyframes mint {
+    0%   {font-size: 60px; color: black;}
+    50%  {font-size: 10px; color: white;}
+    100% {font-size: 60px; color: white;}
+}
+
+.intro {
+    position: relative;
+    width: 100%;
+    top: 0;
+
+    overflow: hidden;
+    max-height: calc(100vh);
+    height: 56vw;
+    display: block;
+
+    &__video {
+        video {
+            width: 100%;
+            object-fit: cover;
+            z-index: 0;
+            position: absolute;
+            bottom: 0;
+        }
+
+        &__web {
+            display: block;
+        }
+
+        &__mobile {
+            display: none;
+        }
+    }
+
+    &__mintBtn {
+        position: absolute;
+        transform: translate3d(-50%, -50%, 0);
+        top: 40%;
+        left: 50%;
+
+        button {
+            width: 375px;
+            height: 100px;
+            padding: 15px 120px;
+            font-family: 'EquinoxBold';
+            font-size: 60px;
+            font-weight: bold;
+            text-shadow: 2px 2px 15px #383833f7;
+
+            background: white;
+            border-radius: 35px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+            color: black;
+
+            &:hover {
+                animation: mint 0.3s linear;
+                background: #ffc400;
+                color: white;
+            }
+        }
+    }
+
+    &__bottom {
+        position: absolute;
+        bottom: 0;
+        transform: translate3d(-50%, 50%, 0);
+        left: 50%;
+        width: 120vw;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    @keyframes mint {
+        0%   {font-size: 4vw; color: black;}
+        50%  {font-size: 5px; color: white;}
+        100% {font-size: 4vw; color: white;}
+    }
+
+    .intro {
+        &__mintBtn {
+            button {
+                width: 26.25vw;
+                height: 7vw;
+                padding: 1.05vw 8vw;
+                font-size: 4vw;
+                text-shadow: 0.14vw 0.14vw 1vw #383833f7;
+    
+                border-radius: 2.45vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    @keyframes mint {
+        0%   {font-size: 8vw; color: black;}
+        50%  {font-size: 10px; color: white;}
+        100% {font-size: 8vw; color: white;}
+    }
+
+    .intro {
+        max-height: unset;
+        height: unset;
+        
+        &__video {
+            video {
+                position: relative;
+                bottom: unset;
+            }
+
+            &__web {
+                display: none;
+            }
+    
+            &__mobile {
+                display: block;
+            }
+        }
+
+        &__mintBtn {
+            button {
+                width: 52.5vw;
+                height: 14vw;
+                padding: 2.1vw 16vw;
+                font-size: 8vw;
+                text-shadow: 0.28vw 0.28vw 2vw #383833f7;
+    
+                border-radius: 4.9vw;
+            }
+        }
+    }
+}

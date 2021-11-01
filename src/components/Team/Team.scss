@@ -1,0 +1,105 @@
+.team {
+    text-align: center;
+
+    &__title {
+        &__video {
+            video {
+                width: 200px;
+            }
+        }
+
+        &__text {
+            margin-bottom: 50px;
+
+            span {
+                text-align: center;
+                font: normal normal bold 28px EquinoxBold;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                
+                padding: 10px 30px;
+                background: #160C20;
+                border-radius: 100px;
+            }
+        }
+    }
+
+    &__members {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__item {
+            margin: 30px 0;
+            width: 300px;
+
+            &__pic {
+                img {
+                    width: 90%;
+                }
+            }
+
+            &__desc {
+                text-align: center;
+
+                &__name {
+                    font: normal normal bold 25px/34px Equinox;
+                    letter-spacing: 0px;
+                    color: #FFFFFF;
+                }
+
+                &__role {
+                    font: normal normal bold 15px/21px Equinox;
+                    letter-spacing: 0px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .team {
+        &__title {
+            &__video {
+                video {
+                    width: 33vw;
+                }
+            }
+    
+            &__text {
+                margin-bottom: 8.3vw;
+    
+                span {
+                    font: normal normal bold 4.7vw EquinoxBold;
+                    
+                    padding: 1.7vw 5vw;
+                    border-radius: 16vw;
+                }
+            }
+        }
+    
+        &__members {
+            &__item {
+                margin: 5vw 0;
+                width: 300px;
+    
+                &__pic {
+                    img {
+                        width: 90%;
+                    }
+                }
+    
+                &__desc {
+                    &__name {
+                        font: normal normal bold 4.5vw Equinox;
+                    }
+    
+                    &__role {
+                        font: normal normal bold 3vw Equinox;
+                    }
+                }
+            }
+        }
+    }
+}

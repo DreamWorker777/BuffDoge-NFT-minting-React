@@ -1,0 +1,110 @@
+.vision {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+
+    &__content {
+        width: 60%;
+        padding: 0 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__title {
+            margin-bottom: 20px;
+
+            span {
+                font: normal normal bold 28px EquinoxBold;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+               
+                padding: 10px 30px;
+                background: #160C20;
+                border-radius: 100px;
+            }
+        }
+
+        &__desc {
+            p {
+                text-align: center;
+                font: normal normal bold 25px Equinox;
+                letter-spacing: 0px;
+                color: #AAA5A5;
+            }
+        }
+    }
+
+    &__character {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        video {
+            width: 360px;
+            transform: translate3d(0, -20px, 0);
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .vision {
+        margin: 10vw 0;
+
+        &__content {
+            padding: 0 3%;
+
+            &__title {
+                margin-bottom: 1.5vw;
+    
+                span {
+                    font: normal normal bold 2.3vw EquinoxBold;
+                   
+                    padding: 0.7vw 2vw;
+                }
+            }
+    
+            &__desc {
+                p {
+                    font: normal normal bold 2vw Equinox;
+                }
+            }
+        }
+
+        &__character {
+            video {
+                width: 80%;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .vision {
+        &__content {
+            width: 100%;
+
+            &__title {
+                margin-bottom: 2.2vw;
+    
+                span {
+                    font: normal normal bold 3.5vw EquinoxBold;
+                   
+                    padding: 1vw 3vw;
+                }
+            }
+    
+            &__desc {
+                p {
+                    font: normal normal bold 3vw Equinox;
+                }
+            }
+        }
+    
+        &__character {
+            display: none;
+        }
+    }
+}

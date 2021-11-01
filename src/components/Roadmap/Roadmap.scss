@@ -1,0 +1,135 @@
+.roadmap {
+    margin: 200px 0;
+    &__title {
+        margin: 100px 0;
+        text-align: center;
+        
+        span {
+            text-align: center;
+            font: normal normal bold 28px EquinoxBold;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            
+            padding: 10px 30px;
+            background: #160C20;
+            border-radius: 100px;
+        }
+    }
+
+    &__video {
+        text-align: center;
+        video {
+            width: 80%;
+        }
+    }
+
+    &__pictures {
+        display: none;
+        text-align: center;
+
+        &__pic {
+            position: relative;
+            width: 100%;
+            margin-top: -25vw;
+
+            img {
+                width: 90%;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        width: 600px;
+        transform: translate3d(-50%, 0, 0);
+        left: 50%;
+
+        &__item {
+            text-align: center;
+            margin: 100px 0;
+
+            span {
+                text-align: center;
+                font: normal normal bold 28px EquinoxBold;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                
+                padding: 10px 30px;
+                background: #160C20;
+                border-radius: 100px;
+            }
+
+            p {
+                text-align: center;
+                font: normal normal bold 23px Equinox;
+                letter-spacing: 1px;
+                line-height: 40px;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .roadmap {
+        &__video {
+            video {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .roadmap {
+        margin: 16vw 0;
+        &__title {
+            margin: 16vw 0;
+            margin-top: 0;
+            
+            span {
+                font: normal normal bold 4.6vw EquinoxBold;
+                letter-spacing: 0px;
+                
+                padding: 1.7vw 5vw;
+                border-radius: 16vw;
+            }
+        }
+
+        &__video {
+            display: none;
+        }
+
+        &__pictures {
+            display: block;
+        }
+
+        &__content {
+            width: 80%;
+
+            &__item {
+                margin: 16vw 0;
+                margin-top: 0;
+
+                span {
+                    text-align: center;
+                    font: normal normal bold 4vw EquinoxBold;
+                    letter-spacing: 0px;
+                    color: #FFFFFF;
+                    
+                    padding: 1.8vw 5vw;
+                    background: #160C20;
+                    border-radius: 16vw;
+                }
+
+                p {
+                    text-align: center;
+                    font: normal normal bold 3.3vw Equinox;
+                    letter-spacing: 1px;
+                    line-height: 7.8vw;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}

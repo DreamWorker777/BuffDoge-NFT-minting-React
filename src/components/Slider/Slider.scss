@@ -1,0 +1,19 @@
+.slider {
+    padding: 5vw 0;
+
+    &__eachItem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        div {
+            width: 13vw;
+            height: 13vw;
+
+            background-size: cover;
+
+            transition: all 0.5s;
+        }
+    }
+}

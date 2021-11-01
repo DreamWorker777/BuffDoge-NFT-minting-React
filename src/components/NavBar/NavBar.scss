@@ -1,0 +1,212 @@
+.navBar {
+    background: #ffffff1a 0% 0% no-repeat padding-box;
+    opacity: 1;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    &__logo {
+        margin: 0 30px;
+        margin-left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__icon {
+            padding: 0 10px;
+            position: relative;
+            width: 42px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__title {
+            text-align: left;
+            font: normal normal bold 25px Equinox;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+        }
+    }
+
+    &__menu {
+        margin: 0 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            text-align: left;
+            font: normal normal bold 15px Equinox;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+
+            text-transform: uppercase;
+
+            padding: 10px;
+
+            &:hover {
+                color: #d3a30a;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0 30px;
+        margin-right: 0;
+
+        a {
+            position: relative;
+            width: 25px;
+            margin: 0 5px;
+
+            display: flex;
+            align-items: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+            border-radius: 100%;
+            overflow: hidden;
+
+            span {
+                position: absolute;
+                bottom: -50px;
+                width: 50px;
+                height: 50px;
+                z-index: -1;
+
+                background: #ffc400;
+                transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+            }
+
+            img {
+                width: 100%;
+            }
+
+            &:hover {
+                span {
+                    bottom: 0px;
+                }
+            }
+        }
+    }
+
+    &__walletBtn {
+        text-align: left;
+        font: normal normal bold 15px Equinox;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+
+        border-radius: 5px;
+        background: black;
+        padding: 10px 20px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+        margin: 0 30px;
+
+        &:hover {
+            background: #ffc400;
+            color: white;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .navBar {
+        .container {
+            justify-content: space-between;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        &__menu {
+            display: none;
+        }
+
+        &__walletBtn {
+            position: absolute;
+            left: 50%;
+            transform: translate3d(-50%, 0, 0);
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navBar {
+        &__logo {
+            &__title {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .navBar {    
+        .container {
+            padding: 1.7vw 0;
+        }
+    
+        &__logo {
+            margin: 0 5.1vw;
+
+            &__icon {
+                padding: 0 1.7vw;
+                width: 7.14vw;
+            }
+    
+            &__title {
+                font: normal normal bold 4.25vw Equinox;
+            }
+        }
+    
+        &__menu {
+            margin: 0 3.4vw;
+    
+            a {
+                font: normal normal bold 2.55vw Equinox;
+    
+                padding: 1.7vw;
+            }
+        }
+    
+        &__buttons {
+            margin: 0 5.1vw;
+    
+            a {
+                width: 4.25vw;
+                margin: 0 0.85vw;
+
+                span {
+                    position: absolute;
+                    bottom: -8.5vw;
+                    width: 8.5vw;
+                    height: 8.5vw;
+                }
+            }
+        }
+    
+        &__walletBtn {
+            font: normal normal bold 2.55vw Equinox;
+    
+            border-radius: 0.85vw;
+            padding: 1.7vw 3.4vw;
+        }
+    }
+}

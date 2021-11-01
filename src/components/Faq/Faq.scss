@@ -1,0 +1,125 @@
+.faq {
+    margin-top: 100px;
+
+    &__title {
+        margin-bottom: 50px;
+        text-align: center;
+
+        span {
+            text-align: center;
+            font: normal normal bold 28px EquinoxBold;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            
+            padding: 10px 30px;
+            background: #160C20;
+            border-radius: 100px;
+        }
+    }
+
+    &__content {
+        width: 80%;
+        position: relative;
+        transform: translate3d(-50%, 0, 0);
+        left: 50%;
+
+        .faq-row-wrapper {
+            background: transparent;
+            .faq-title {
+                text-align: left;
+                font: normal normal bold 22px EquinoxBold;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+            }
+        
+            .faq-body {
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+
+                .faq-row {
+                    .row-title {
+                        font: normal normal bold 22px EquinoxBold;
+                        letter-spacing: 0px;
+                        color: #FFFFFF;
+                        opacity: 1;
+
+                        padding: 15px 0;
+                    }
+
+                    .row-content {
+                        .row-content-text {                            
+                            padding: 15px;
+                            padding-top: 0;
+
+                            font: normal normal bold 14px Equinox;
+                            line-height: 22px;
+                            letter-spacing: 0px;
+                            color: #B8B8B8;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__mobile {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .faq {
+        margin-top: 20vw;
+    
+        &__title {
+            margin-bottom: 5vw;
+    
+            span {
+                font: normal normal bold 5.6vw EquinoxBold;
+                
+                padding: 2vw 6vw;
+                
+                border-radius: 20vw;
+            }
+        }
+    
+        &__content {
+            width: 100%;
+            position: relative;
+
+            .faq-row-wrapper {
+                display: none;
+            }
+
+            &__mobile {
+                display: block;
+                text-align: center;
+
+                &__item {
+                    padding: 0 5%;
+                    border-bottom: 1px solid #ccc;
+
+                    &__title {
+                        font: normal normal bold 4.4vw EquinoxBold;
+                        letter-spacing: 0px;
+                        color: #FFFFFF;
+
+                        padding: 3vw 0;
+                    }
+
+                    &__content {
+                        padding: 3vw;
+                        padding-top: 0;
+
+                        font: normal normal bold 2.8vw Equinox;
+                        line-height: 4.4vw;
+                        letter-spacing: 0px;
+                        color: #B8B8B8;
+                    }
+                }
+            }
+        }
+    }
+}

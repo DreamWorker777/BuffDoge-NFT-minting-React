@@ -1,0 +1,39 @@
+@font-face {
+	font-family: 'Equinox';
+	src: local('Equinox'),
+		 url('./assets/fonts/Equinox Regular.otf') format('truetype'), /* Super Modern Browsers */
+}
+
+@font-face {
+	font-family: 'EquinoxBold';
+	src: local('EquinoxBold'),
+		 url('./assets/fonts/Equinox Bold.otf') format('truetype'), /* Super Modern Browsers */
+}
+
+body {
+	overflow-x: hidden;
+	font-family: 'Equinox';
+	background: #0b0610;
+}
+
+.container {
+	max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+a {
+	border: unset;
+	outline: unset;
+
+	cursor: pointer;
+	text-decoration: unset;
+}
+
+button {
+	border: unset;
+	outline: unset;
+
+	cursor: pointer;
+}
