@@ -7,7 +7,6 @@ import team3 from '../../assets/img/team/3.svg';
 import team4 from '../../assets/img/team/4.svg';
 import team5 from '../../assets/img/team/5.svg';
 import team6 from '../../assets/img/team/6.svg';
-import team7 from '../../assets/img/team/7.png';
 
 export const Team = () => {
     const info = [
@@ -41,11 +40,6 @@ export const Team = () => {
             name: 'monir',
             role: 'designer'
         },
-        {
-            image: team7,
-            name: 'superbot',
-            role: 'developer'
-        }
     ];
 
     return (

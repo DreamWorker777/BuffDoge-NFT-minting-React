@@ -1,5 +1,4 @@
-import { useEffect, useRef } from 'react';
-import IsScrolling from 'react-is-scrolling';
+import { useEffect, useRef, useState } from 'react';
 
 import './Roadmap.scss';
 import video from '../../assets/videos/Roadmap.mp4';
@@ -9,8 +8,10 @@ import roadmap3 from '../../assets/img/roadmap/50_.png';
 import roadmap4 from '../../assets/img/roadmap/75_.png';
 import roadmap5 from '../../assets/img/roadmap/100_.png';
 
-export const Roadmap = ({isScrolling, isScrollingDown, isScrollingUp}) => {
+export const Roadmap = () => {
     const videoRef = useRef(null);
+
+    const [endTime, setEndTime] = useState(0);
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
@@ -31,19 +32,22 @@ export const Roadmap = ({isScrolling, isScrollingDown, isScrollingUp}) => {
 
         const offset = currentScrollY + videoHeight / 2 - videoScrollY;
 
-        if( offset < 0 )
+        if( offset > 0 ) {
+            const time = Math.ceil(offset * speed) > videoRef.current.duration ? videoRef.current.duration : Math.ceil(offset * speed);
+            setEndTime(time);
+
+            if( time > videoRef.current.currentTime )
+                videoRef.current.play();
+        } else {
             videoRef.current.currentTime = 0;
-        else
-            videoRef.current.currentTime = offset * speed > videoRef.current.duration ? videoRef.current.duration : offset * speed;
+        }
     }
 
-    // useEffect(() => {
-    //     if( isScrolling) {
-    //         videoRef.current.play();
-    //     } else {
-    //         videoRef.current.pause();
-    //     }
-    // }, [isScrolling])
+    const handlePlaying = () => {
+        const time = videoRef.current.currentTime;
+        if( time > endTime )
+            videoRef.current.pause();
+    }
 
     return (
         <section className="roadmap" id="roadmap">
@@ -52,7 +56,7 @@ export const Roadmap = ({isScrolling, isScrollingDown, isScrollingUp}) => {
             </div>
 
             <div className="roadmap__video">
-                <video ref={videoRef} muted>
+                <video ref={videoRef} muted onTimeUpdate={ handlePlaying }>
                     <source src={video} type="video/mp4"/>
                 </video>
             </div>
@@ -96,4 +100,4 @@ export const Roadmap = ({isScrolling, isScrollingDown, isScrollingUp}) => {
     )
 }
 
-export default IsScrolling(Roadmap);
+export default Roadmap;

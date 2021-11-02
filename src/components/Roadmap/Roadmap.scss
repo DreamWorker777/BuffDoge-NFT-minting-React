@@ -72,6 +72,17 @@
 
 @media (max-width: 1200px) {
     .roadmap {
+        margin: 16vw 0;
+        &__title {
+            margin-bottom: 1.5vw;
+
+            span {
+                font: normal normal bold 2.3vw EquinoxBold;
+
+                padding: 0.7vw 2vw;
+            }
+        }
+
         &__video {
             video {
                 width: 100%;
@@ -86,13 +97,11 @@
         &__title {
             margin: 16vw 0;
             margin-top: 0;
-            
+
             span {
-                font: normal normal bold 4.6vw EquinoxBold;
-                letter-spacing: 0px;
+                font: normal normal bold 3.5vw EquinoxBold;
                 
-                padding: 1.7vw 5vw;
-                border-radius: 16vw;
+                padding: 1vw 3vw;
             }
         }
 
@@ -124,7 +133,7 @@
 
                 p {
                     text-align: center;
-                    font: normal normal bold 3.3vw Equinox;
+                    font: normal normal bold 3vw Equinox;
                     letter-spacing: 1px;
                     line-height: 7.8vw;
                     color: #FFFFFF;

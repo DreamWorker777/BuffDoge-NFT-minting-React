@@ -1,19 +1,42 @@
 .slider {
     padding: 5vw 0;
+    overflow: hidden;
+
+    .sliderWrapper {
+        display: flex;
+        position: relative;
+        align-items: center;
+
+        height: 450px;
+    }
 
     &__eachItem {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
+        padding: 30px;
+        transition: all 0.5s;
 
         div {
-            width: 13vw;
-            height: 13vw;
+            width: 277px;
+            height: 277px;
 
             background-size: cover;
 
             transition: all 0.5s;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .slider {
+        &__eachItem {
+            padding: 20px;
+        }
+    }
+}
+
+@media (max-width: 568px) {
+    .slider {
+        &__eachItem {
+            padding: 10px;
         }
     }
 }

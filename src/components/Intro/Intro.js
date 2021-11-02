@@ -1,3 +1,5 @@
+import {useEffect} from 'react';
+
 import './Intro.scss';
 
 import intro_video from '../../assets/videos/web main page.mp4';
@@ -5,6 +7,20 @@ import mobile_video from '../../assets/videos/phone first page.mp4';
 import bottom from '../../assets/img/introBottom.svg';
 
 export const Intro = () => {
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    });
+
+    const handleScroll = () => {
+        const scrollY = window.scrollY;
+
+        document.getElementsByClassName('intro__video__web')[0].style.bottom = -scrollY / 3 + "px";
+    }
+
     return (
         <section className="intro" id="mint">
             <div className="intro__video">
