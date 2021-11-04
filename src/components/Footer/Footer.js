@@ -9,6 +9,8 @@ import twitterIcon from '../../assets/img/icons/twitter.svg';
 import discordIcon from '../../assets/img/icons/discord.svg';
 import openseaIcon from '../../assets/img/icons/opensea.svg';
 
+import pdf from '../../assets/Buff_Paper.pdf';
+
 export const Footer = () => {
     return (
         <section className="footer">
@@ -41,6 +43,11 @@ export const Footer = () => {
             </div>
 
             <div className="footer__content">
+                <div className="footer__content__developer">
+                    <p>developed by</p>
+                    <p className="footer__content__developer__name">superbot</p>
+                </div>
+
                 <div className="container">
                     <div className="footer__content__copyright">
                         ©2021 BuffDoge. All rights reserved.
@@ -75,6 +82,10 @@ export const Footer = () => {
                             <img alt="img" src={logoIcon}></img>  
                         </div>
                     </div>
+                </div>
+
+                <div className="footer__content__paper">
+                    <a href={pdf} target="_blank">BUFF PAPER</a>
                 </div>
             </div>
         </section>

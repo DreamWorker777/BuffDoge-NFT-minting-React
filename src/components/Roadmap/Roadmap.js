@@ -25,19 +25,46 @@ export const Roadmap = () => {
         const videoHeight = videoRef.current.clientHeight;
         const videoDuration = videoRef.current.duration;
 
-        const speed = videoDuration / videoHeight;
+        const steps = [
+            {
+                topPercent: 0.2152,
+                time: 2.25
+            },
+            {
+                topPercent: 0.2961,
+                time: 4.45
+            },
+            {
+                topPercent: 0.4862,
+                time: 7.12
+            },
+            {
+                topPercent: 0.6,
+                time: 9.9
+            },
+            {
+                topPercent: 0.8161,
+                time: videoDuration,
+            },
+        ]
 
         const currentScrollY = window.scrollY;
         const videoScrollY = window.pageYOffset + videoRef.current.getBoundingClientRect().top;
 
-        const offset = currentScrollY + videoHeight / 2 - videoScrollY;
+        const offset = currentScrollY + window.innerHeight - videoScrollY;
+
+        console.error(offset, videoHeight);
 
         if( offset > 0 ) {
-            const time = Math.ceil(offset * speed) > videoRef.current.duration ? videoRef.current.duration : Math.ceil(offset * speed);
-            setEndTime(time);
+            steps.forEach((step) => {
+                if( offset > videoHeight * step.topPercent ) {
+                    setEndTime(step.time);
 
-            if( time > videoRef.current.currentTime )
-                videoRef.current.play();
+                    if( step.time > videoRef.current.currentTime )
+                        videoRef.current.play();
+                }
+            });
+
         } else {
             videoRef.current.currentTime = 0;
         }
@@ -45,8 +72,10 @@ export const Roadmap = () => {
 
     const handlePlaying = () => {
         const time = videoRef.current.currentTime;
-        if( time > endTime )
+        if( time > endTime ) {
             videoRef.current.pause();
+        }
+            
     }
 
     return (

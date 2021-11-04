@@ -6,6 +6,8 @@ import twitterIcon from '../../assets/img/icons/twitter.svg';
 import discordIcon from '../../assets/img/icons/discord.svg';
 import openseaIcon from '../../assets/img/icons/opensea.svg';
 
+import pdf from '../../assets/Buff_Paper.pdf';
+
 export const NavBar = () => {
     const menu = [
         {
@@ -36,7 +38,12 @@ export const NavBar = () => {
 
     return (
         <header className="navBar">
+            <div className="navBar__paper">
+                <a href={pdf} target="_blank"><span>BUFF PAPER</span></a>
+            </div>
+
             <div className="container">
+
                 <div className="navBar__logo">
                     <div className="navBar__logo__icon">
                         <img alt="img" src={logoIcon}></img>

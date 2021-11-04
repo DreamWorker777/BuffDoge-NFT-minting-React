@@ -1,44 +1,50 @@
 import './Team.scss';
 
 import teamLogo from '../../assets/img/ezgif.com-gif-maker_3.gif';
-import team1 from '../../assets/img/team/1.svg';
-import team2 from '../../assets/img/team/2.svg';
-import team3 from '../../assets/img/team/3.svg';
-import team4 from '../../assets/img/team/4.svg';
-import team5 from '../../assets/img/team/5.svg';
-import team6 from '../../assets/img/team/6.svg';
+import team1 from '../../assets/img/team/1.png';
+import team2 from '../../assets/img/team/2.png';
+import team3 from '../../assets/img/team/3.png';
+import team4 from '../../assets/img/team/4.png';
+import team5 from '../../assets/img/team/5.png';
+import team6 from '../../assets/img/team/6.png';
 
 export const Team = () => {
     const info = [
         {
             image: team1,
             name: 'alpha',
-            role: 'graphic & motion designer'
+            role: 'graphic & motion designer',
+            link: 'https://twitter.com/1Alpha00'
         },
         {
             image: team2,
             name: 'samer',
-            role: 'community manager'
+            role: 'community manager',
+            link: 'https://twitter.com/BuffSamer'
         },
         {
             image: team3,
             name: 'rashid',
-            role: 'marketing expert'
+            role: 'marketing expert',
+            link: 'https://twitter.com/RashidBuff'
         },
         {
             image: team4,
             name: 'dagmus',
-            role: 'art director'
+            role: 'art director',
+            link: 'https://twitter.com/BuffDagmus'
         },
         {
             image: team5,
             name: 'naji',
-            role: 'designer'
+            role: 'designer',
+            link: 'https://twitter.com/BuffNaji'
         },
         {
             image: team6,
             name: 'monir',
-            role: 'designer'
+            role: 'designer',
+            link: 'https://twitter.com/BuffMonir'
         },
     ];
 
@@ -59,7 +65,7 @@ export const Team = () => {
                     info.map((item, index) => (
                         <div className="team__members__item" key={index}>
                             <div className="team__members__item__pic">
-                                <img alt="pic" src={item.image}></img>
+                                <a href={item.link} target="_blank"><img alt="pic" src={item.image}></img></a>
                             </div>
 
                             <div className="team__members__item__desc">

@@ -16,6 +16,30 @@
         padding: 10px 0;
     }
 
+    &__paper {
+        position: absolute;
+        left: 2%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        span {
+            color: black;
+            font-family: EquinoxBold;
+            font-weight: 900;
+            font-size: 15px;
+            padding: 5px 30px;
+            border-radius: 100px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+                background: #FFC400;
+            }
+        }
+    }
+
     &__logo {
         margin: 0 30px;
         margin-left: 0;
@@ -125,6 +149,14 @@
         &:hover {
             background: #ffc400;
             color: white;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .navBar {
+        &__paper {
+            display: none;
         }
     }
 }

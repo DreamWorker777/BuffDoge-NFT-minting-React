@@ -159,6 +159,53 @@
                 }
             }
         }
+
+        &__paper {
+            text-align: center;
+            padding: 20px 0;
+
+            a {
+                color: white;
+                transition: all 0.3s;
+                font-weight: 900;
+                font-family: EquinoxBold;
+                font-size: 15px;
+
+                &:hover {
+                    color: #FFC400;
+                }
+            }
+        }
+
+        &__developer {
+            position: absolute;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            left: 50px;
+            cursor: pointer;
+
+            font-family: EquinoxBold;
+            font-size: 15px;
+            font-weight: 300;
+            color: white;
+
+            &__name {
+                font-size: 17px;
+                font-weight: 900;
+            }
+
+            &:hover {
+                color: #FFC400;
+            }
+
+            p {
+                margin-block-start: 0.2em;
+                margin-block-end: 0.2em;
+            }
+        }
     }
 }
 
@@ -262,7 +309,11 @@
         }
 
         &__content {
+            display: flex;
+            flex-direction: column-reverse;
+
             margin: 5vw 0;
+            margin-top: 0;
 
             &__copyright {
                 display: none;
@@ -290,6 +341,54 @@
                     display: none;
                 }
             }
+
+            &__paper {
+                padding: 20px 0;
+                margin-bottom: 20px;
+    
+                a {
+                    font-size: 23px;
+                    padding: 10px 30px;
+                    background: white;
+                    color: black;
+                    border-radius: 20px;
+
+                    &:hover {
+                        color: black;
+                        background: #FFC400;
+                    }
+                }
+            }
+    
+            &__developer {
+                position: absolute;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                left: 50px;
+                cursor: pointer;
+    
+                font-family: EquinoxBold;
+                font-size: 15px;
+                font-weight: 300;
+                color: white;
+    
+                &__name {
+                    font-size: 17px;
+                    font-weight: 900;
+                }
+    
+                &:hover {
+                    color: #FFC400;
+                }
+    
+                p {
+                    margin-block-start: 0.2em;
+                    margin-block-end: 0.2em;
+                }
+            }
         }
     }
 }
@@ -307,6 +406,26 @@
                         width: 16.6vw;
                         height: 16.6vw;
                     }
+                }
+            }
+
+            &__paper {
+                padding: 3.3vw 0;
+                margin-bottom: 3.3vw;
+    
+                a {
+                    font-size: 4vw;
+                    padding: 1.6vw 5vw;
+                    border-radius: 3.3vw;
+                }
+            }
+    
+            &__developer {
+                left: 5vw;
+                font-size: 2.5vw;
+    
+                &__name {
+                    font-size: 3vw;
                 }
             }
         }
