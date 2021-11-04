@@ -1,6 +1,6 @@
 import './Team.scss';
 
-import video from '../../assets/videos/3d Logo animation.mp4'
+import teamLogo from '../../assets/img/ezgif.com-gif-maker_3.gif';
 import team1 from '../../assets/img/team/1.svg';
 import team2 from '../../assets/img/team/2.svg';
 import team3 from '../../assets/img/team/3.svg';
@@ -45,10 +45,8 @@ export const Team = () => {
     return (
         <section className="team" id="team">
             <div className="team__title">
-                <div className="team__title__video">
-                    <video autoPlay muted loop>
-                        <source src={video} type="video/mp4"/>
-                    </video>
+                <div className="team__title__anim">
+                    <img src={teamLogo} alt="pic"></img>
                 </div>
 
                 <div className="team__title__text">

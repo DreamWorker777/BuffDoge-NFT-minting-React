@@ -2,8 +2,8 @@
     text-align: center;
 
     &__title {
-        &__video {
-            video {
+        &__anim {
+            img {
                 width: 200px;
             }
         }
@@ -61,8 +61,8 @@
 @media (max-width: 600px) {
     .team {
         &__title {
-            &__video {
-                video {
+            &__anim {
+                img {
                     width: 33vw;
                 }
             }
