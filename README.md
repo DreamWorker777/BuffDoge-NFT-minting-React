@@ -5,6 +5,10 @@
 
 In the project directory, you can run:
 
+### `yarn install`
+
+Install node modules required for the project 
+
 ### `yarn start`
 
 Runs the app in the development mode.\
