@@ -51,7 +51,7 @@ export const Roadmap = () => {
         const currentScrollY = window.scrollY;
         const videoScrollY = window.pageYOffset + videoRef.current.getBoundingClientRect().top;
 
-        const offset = currentScrollY + window.innerHeight - videoScrollY;
+        const offset = currentScrollY + window.innerHeight / 2 - videoScrollY;
 
         console.error(offset, videoHeight);
 
@@ -64,9 +64,6 @@ export const Roadmap = () => {
                         videoRef.current.play();
                 }
             });
-
-        } else {
-            videoRef.current.currentTime = 0;
         }
     }
 
