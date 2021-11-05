@@ -27,19 +27,19 @@ export const Roadmap = () => {
 
         const steps = [
             {
-                topPercent: 0.2152,
+                topPercent: 0.2152 + 0.08,
                 time: 2.25
             },
             {
-                topPercent: 0.2961,
-                time: 4.45
+                topPercent: 0.2961 + 0.08,
+                time: 4.7
             },
             {
-                topPercent: 0.4862,
-                time: 7.12
+                topPercent: 0.4862 + 0.08,
+                time: 7.45
             },
             {
-                topPercent: 0.6,
+                topPercent: 0.6 + 0.07,
                 time: 9.9
             },
             {
