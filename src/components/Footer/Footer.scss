@@ -148,6 +148,14 @@
                         bottom: 0px;
                     }
                 }
+
+                &.noAnimation {
+                    &:hover {
+                        span {
+                            bottom: -100px;
+                        }
+                    }
+                }
             }
 
             &__logo {

@@ -9,6 +9,7 @@ import team5 from '../../assets/img/team/5.png';
 import team6 from '../../assets/img/team/6.png';
 
 import birdIcon from '../../assets/img/icons/bird.svg';
+import birdBlue from '../../assets/img/icons/bird_blue.svg';
 
 export const Team = () => {
     const info = [
@@ -78,7 +79,10 @@ export const Team = () => {
                                     {item.role}
                                 </div>
                                 <div className="team__members__item__desc__link">
-                                    <a href={item.link} target="_blank"><img alt="pic" src={birdIcon}></img></a>
+                                    <a href={item.link} target="_blank">
+                                        <img className="white" alt="pic" src={birdIcon}></img>
+                                        <img className="blue" alt="pic" src={birdBlue}></img>
+                                    </a>
                                 </div>
                             </div>
                         </div>

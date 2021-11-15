@@ -78,7 +78,7 @@ export const Footer = () => {
                             <span></span>
                             <img alt="img" src={discordIcon}></img>
                         </a>
-                        <a href="#javascript;">
+                        <a href="#javascript;" className="noAnimation">
                             <span></span>
                             <img alt="img" src={openseaIcon}></img>
                         </a>

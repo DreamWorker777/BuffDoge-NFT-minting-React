@@ -12,6 +12,7 @@ import pdf from '../../assets/Buff_Paper.pdf';
 
 export const NavBar = () => {
     const [active, setActive] = useState('active');
+    const [lastScroll, setLastScroll] = useState(0);
 
     const menu = [
         {
@@ -41,12 +42,16 @@ export const NavBar = () => {
     ];
 
 
-    const handleScroll = () => {
-        if( window.scrollY === 0 ) {
-            setActive('active')
+    const handleScroll = (event) => {
+        console.error(event);
+
+        if( window.scrollY <= lastScroll ) {
+            setActive('active');
         } else {
             setActive('');
         }
+
+        setLastScroll(window.scrollY);
     }
 
     useEffect(() => {
@@ -103,7 +108,7 @@ export const NavBar = () => {
                         <span></span>
                         <img alt="img" src={discordIcon}></img>
                     </a>
-                    <a href="#javascript;">
+                    <a href="#javascript;" className="noAnimation">
                         <span></span>
                         <img alt="img" src={openseaIcon}></img>
                     </a>

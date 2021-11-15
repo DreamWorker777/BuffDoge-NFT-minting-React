@@ -55,9 +55,29 @@
                 }
 
                 &__link {
+                    position: relative;
+
                     img {
                         width: 25px;
                         padding: 10px 0;
+                    }
+
+                    .white {
+                        position: relative;
+                        z-index: 2;
+
+                        &:hover {
+                            opacity: 0;
+                        }
+                    }
+
+                    .blue {
+                        position: absolute;
+                        top: 0;
+                        z-index: 1;
+
+                        transform: translate3d(-50%, 0, 0);
+                        left: 50%;
                     }
                 }
             }

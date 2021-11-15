@@ -23,6 +23,10 @@ export const FaqComponent = () => {
             {
                 title: "How can I own a buff doge?",
                 content: "The only way to own a buff doge before revealing will be by minting one on buffdogenft.com"
+            },
+            {
+                title: "what about royalties?",
+                content: "the royalties will be 5%. 50% FOR THE COMMUNITY"
             }
         ]
     };
