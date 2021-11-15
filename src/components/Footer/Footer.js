@@ -37,7 +37,7 @@ export const Footer = () => {
                         </div>
 
                         <div className="footer__banner__content__join">
-                            <button>Join discord</button>
+                            <a href="https://discord.gg/sVtpaCy7S2" target="_blank"><button>Join discord</button></a>
                         </div>
                     </div>
                 </div>
