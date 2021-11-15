@@ -163,10 +163,9 @@ export const Roadmap = () => {
                     <span>PHASE 2</span>
                     <p className="title">Game development</p>
                     <p>
-                        Start with game development <br/>
-                        Play to earn. <br/>
-                        All 4 characters are in one game. <br/>
-                        Multiple games, one place.
+                        -Start with game development Play to earn. <br/>
+                        -All 4 characters are in one game. <br/>
+                        -Multiple games, one place.
                     </p>
                     <div className="roadmap__content__item__sidePic right">
                         <img alt="pic" src={side1}></img>
@@ -177,7 +176,7 @@ export const Roadmap = () => {
                     <p className="title">Releasing of buff- Pussies, owls, and myths 30 000 soldiers</p>
                     <p>Free minting for Buff Doge owners.<br/>Buff Doge owners will only be able to mint one of each buff category.</p>
 
-                    <div className="roadmap__content__item__sidePic top">
+                    <div className="roadmap__content__item__sidePic top phase3">
                         <img alt="pic" src={side2}></img>
                     </div>
 
