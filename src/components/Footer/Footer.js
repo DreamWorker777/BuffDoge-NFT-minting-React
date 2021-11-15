@@ -7,7 +7,8 @@ import bannerBot from '../../assets/img/banner_bot.png';
 import logoIcon from '../../assets/img/icons/logo.svg';
 import twitterIcon from '../../assets/img/icons/twitter.svg';
 import discordIcon from '../../assets/img/icons/discord.svg';
-import openseaIcon from '../../assets/img/icons/opensea.svg';
+import openseaIcon from '../../assets/img/icons/openseaGrey.svg';
+import instagramIcon from '../../assets/img/icons/instagram.svg';
 
 import pdf from '../../assets/Buff_Paper.pdf';
 
@@ -65,11 +66,15 @@ export const Footer = () => {
                             </Link>
                         </div>
 
-                        <a href="#javascript;">
+                        <a href="https://www.instagram.com/buffdogenft/" target="_blank">
+                            <span></span>
+                            <img alt="img" src={instagramIcon}></img>
+                        </a>
+                        <a href="https://twitter.com/BuffDogeNFT" target="_blank">
                             <span></span>
                             <img alt="img" src={twitterIcon}></img>
                         </a>
-                        <a href="#javascript;">
+                        <a href="https://discord.gg/sVtpaCy7S2" target="_blank">
                             <span></span>
                             <img alt="img" src={discordIcon}></img>
                         </a>

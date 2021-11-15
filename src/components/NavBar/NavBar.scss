@@ -4,8 +4,14 @@
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     z-index: 10;
-    position: absolute;
+    position: fixed;
+    top: -66px;
     width: 100%;
+    transition: all 0.5s;
+
+    &.active {
+        top: 0;
+    }
 
     .container {
         max-width: 1024px;
@@ -68,7 +74,7 @@
     }
 
     &__menu {
-        margin: 0 20px;
+        margin: 0 0px;
 
         display: flex;
         align-items: center;
@@ -192,7 +198,9 @@
 }
 
 @media (max-width: 600px) {
-    .navBar {    
+    .navBar {
+        top: -11vw;
+
         .container {
             padding: 1.7vw 0;
         }

@@ -8,6 +8,8 @@ import team4 from '../../assets/img/team/4.png';
 import team5 from '../../assets/img/team/5.png';
 import team6 from '../../assets/img/team/6.png';
 
+import birdIcon from '../../assets/img/icons/bird.svg';
+
 export const Team = () => {
     const info = [
         {
@@ -65,7 +67,7 @@ export const Team = () => {
                     info.map((item, index) => (
                         <div className="team__members__item" key={index}>
                             <div className="team__members__item__pic">
-                                <a href={item.link} target="_blank"><img alt="pic" src={item.image}></img></a>
+                                <img alt="pic" src={item.image}></img>
                             </div>
 
                             <div className="team__members__item__desc">
@@ -74,6 +76,9 @@ export const Team = () => {
                                 </div>
                                 <div className="team__members__item__desc__role">
                                     {item.role}
+                                </div>
+                                <div className="team__members__item__desc__link">
+                                    <a href={item.link} target="_blank"><img alt="pic" src={birdIcon}></img></a>
                                 </div>
                             </div>
                         </div>

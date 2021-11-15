@@ -42,7 +42,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        video {
+        img {
             width: 440px;
             transform: translate3d(0, -20px, 0);
         }
@@ -75,7 +75,7 @@
         }
 
         &__character {
-            video {
+            img {
                 width: 95%;
                 transform: translate3d(0, 0, 0);
             }

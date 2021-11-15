@@ -23,6 +23,10 @@
         transform: translate3d(-50%, 0, 0);
         left: 50%;
 
+        svg {
+            fill: #0a0710 !important;
+        }
+
         .faq-row-wrapper {
             background: transparent;
             .faq-title {

@@ -53,6 +53,13 @@
                     letter-spacing: 0px;
                     color: #FFFFFF;
                 }
+
+                &__link {
+                    img {
+                        width: 25px;
+                        padding: 10px 0;
+                    }
+                }
             }
         }
     }
@@ -99,6 +106,13 @@
                     &__role {
                         font: normal normal bold 2.8vw Equinox;
                         line-height: 5vw;
+                    }
+
+                    &__link {
+                        img {
+                            width: 4.1vw;
+                            padding: 1.66vw 0;
+                        }
                     }
                 }
             }

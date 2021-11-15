@@ -1,5 +1,5 @@
 import './Galaxy.scss';
-import video from '../../assets/videos/1st character.mp4';
+import animation from '../../assets/img/2nd-character.gif';
 
 export const Galaxy = () => {
     return (
@@ -17,9 +17,7 @@ export const Galaxy = () => {
             </div>
 
             <div className="galaxy__character">
-                <video autoPlay loop muted>
-                    <source src={video} type="video/mp4"/>
-                </video>
+                <img alt="pic" src={animation}></img>
             </div>
         </section>
     )

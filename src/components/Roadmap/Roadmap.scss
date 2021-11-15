@@ -1,7 +1,7 @@
 .roadmap {
     margin: 200px 0;
     &__title {
-        margin: 100px 0;
+        margin-top: 100px;
         text-align: center;
         
         span {
@@ -16,10 +16,116 @@
         }
     }
 
-    &__video {
+    &__subtitle {
+        margin-bottom: 200px;
+        margin-top: 30px;
         text-align: center;
-        video {
-            width: 80%;
+        
+        span {
+            text-align: center;
+            font: normal normal bold 22px EquinoxBold;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+        }
+    }
+
+    &__video {
+        position: relative;
+        text-align: center;
+
+        &__item {
+            position: relative;
+            width: 100%;
+
+            &.left {
+                text-align: left;
+            }
+
+            &.right {
+                text-align: right;
+            }
+
+            &.width50 {
+                margin-bottom: -300px;
+                video {
+                    width: 50%;
+                }
+            }
+
+            &.width100 {
+                text-align: center;
+                margin-top: 300px;
+                video {
+                    width: 80%;
+                }
+            }
+        }
+
+        &__timeline {
+            position: absolute;
+            top: 0;
+
+            width: 100%;
+            height: 100%;
+
+            transform: translate3d(-50%, 0, 0);
+            left: 50%;
+
+            &__baseline {
+                position: absolute;
+                height: 70%;
+                width: 0.2%;
+
+                background: #fff;
+
+                transform: translate3d(-50%, 0, 0);
+                left: 50%;
+            }
+
+            &__circle {
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                border-radius: 15px;
+                
+                transform: translate3d(-50%, 0, 0);
+                left: 50%;
+                background: #fff;
+            }
+            
+            &__base {
+                position: absolute;
+                transform: translate3d(-50%, 0, 0);
+                left: 50%;
+                bottom: 2%;
+                width: 17%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &__rocket {
+                position: absolute;
+                width: 8%;
+                transform: translate3d(-50%, -90%, 0) rotate(180deg);
+                left: 50%;
+                transition: all 0.2s;
+
+                img {
+                    width: 100%;
+                }
+
+                &.active {
+                    transition-duration: 1s;
+
+                    transform: translate3d(-50%, 0, 0) rotate(360deg);
+                }
+
+                &.toBottom {
+                    top: 86% !important;
+                }
+            }
         }
     }
 
@@ -40,13 +146,11 @@
 
     &__content {
         position: relative;
-        width: 600px;
-        transform: translate3d(-50%, 0, 0);
-        left: 50%;
 
         &__item {
             text-align: center;
             margin: 100px 0;
+            position: relative;
 
             span {
                 text-align: center;
@@ -61,10 +165,53 @@
 
             p {
                 text-align: center;
-                font: normal normal bold 23px Equinox;
+                font: normal normal bold 17px Equinox;
                 letter-spacing: 1px;
                 line-height: 40px;
                 color: #FFFFFF;
+                font-weight: 100;
+
+                &.title {
+                    font-family: EquinoxBold;
+                    font-size: 18px;
+                }
+            }
+
+            &__sidePic {
+                position: absolute;
+                width: 17%;
+                transform: translate3d(0, -50%, 0);
+                left: 0;
+                top: 50%;
+
+                img {
+                    width: 100%;
+                }
+
+                &.top {
+                    top: 25%;
+                }
+
+                &.right {
+                    right: 0;
+                    left: unset;
+                }
+            }
+
+            &__photos {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                
+                div {
+                    position: relative;
+                    width: 300px;
+                    margin-bottom: 30px;
+
+                    img {
+                        width: 80%;
+                    }
+                }
             }
         }
     }
@@ -73,19 +220,60 @@
 @media (max-width: 1200px) {
     .roadmap {
         margin: 16vw 0;
-        &__title {
-            margin-bottom: 1.5vw;
 
-            span {
-                font: normal normal bold 2.3vw EquinoxBold;
+        &__subtitle {
+            margin-bottom: 16.66vw;
+        }
 
-                padding: 0.7vw 2vw;
+        &__video { 
+            &__item {
+                &.width50 {
+                    margin-bottom: -25vw;
+                }
+    
+                &.width100 {
+                    margin-top: 25vw;
+                }
+            }
+    
+            &__timeline {
+                &__circle {
+                    position: absolute;
+                    width: 2.1vw;
+                    height: 2.1vw;
+                    border-radius: 1.25vw;
+                }
             }
         }
 
-        &__video {
-            video {
-                width: 100%;
+        &__content {
+            &__item {
+                &__sidePic {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .roadmap {
+        &__content {
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .roadmap {
+        &__content {
+            &__item {
+                &__photos {
+                    div {
+                        width: 44.8vw;
+                        margin-bottom: 4.48vw;
+                    }
+                }
             }
         }
     }
@@ -95,8 +283,18 @@
     .roadmap {
         margin: 16vw 0;
         &__title {
-            margin: 16vw 0;
             margin-top: 0;
+
+            span {
+                font: normal normal bold 4vw EquinoxBold;
+
+                padding: 1vw 3vw;
+            }
+        }
+
+        &__subtitle {
+            margin-top: 2.5vw;
+            margin-bottom: 32vw;
 
             span {
                 font: normal normal bold 3.5vw EquinoxBold;
@@ -114,7 +312,7 @@
         }
 
         &__content {
-            width: 80%;
+            width: 90%;
 
             &__item {
                 margin: 16vw 0;
@@ -137,6 +335,10 @@
                     letter-spacing: 1px;
                     line-height: 7.8vw;
                     color: #FFFFFF;
+
+                    &.title {
+                        font-size: 3.5vw;
+                    }
                 }
             }
         }
