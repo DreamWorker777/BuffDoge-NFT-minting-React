@@ -43,8 +43,6 @@ export const NavBar = () => {
 
 
     const handleScroll = (event) => {
-        console.error(event);
-
         if( window.scrollY <= lastScroll ) {
             setActive('active');
         } else {
